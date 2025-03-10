@@ -11,7 +11,8 @@ export default {
         };
     },
     async created() {
-    var response = await fetch("http://localhost:3000/tweetNegativeReason");
+    const API_URL = process.env.VUE_APP_API_URL;
+    var response = await fetch(`${API_URL}/tweetNegativeReason`);
     const data = await response.json();
 
     this.airlineName = [...new Set(data.map(d => d.airline))];

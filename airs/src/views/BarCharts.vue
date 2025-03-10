@@ -12,7 +12,8 @@ export default {
         };
     },
   async created() {
-    const response = await fetch("http://localhost:3000/tweetSentiment");
+    const API_URL = process.env.VUE_APP_API_URL;
+    const response = await fetch(`${API_URL}/tweetSentiment`);
      const data = await response.json();
         for(var i=0;i<data.length;i++){
 
