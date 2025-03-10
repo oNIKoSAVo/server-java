@@ -1,0 +1,18 @@
+/node_modules
+node_modules
+
+
+# IntelliJ IDEA / Eclipse
+.idea/
+*.iml
+*.class
+*.log
+
+# Maven / Gradle
+target/
+*.jar
+*.war
+
+# Database
+database.sqlite3
+data.sql

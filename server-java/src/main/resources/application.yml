@@ -1,0 +1,35 @@
+server:
+  port: 3000  # Устанавливаем порт 3000 вместо 8080
+  error:
+    whitelabel.enabled: false
+    include-message: always
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+spring:
+  datasource:
+    url: jdbc:sqlite:database.sqlite3
+    driver-class-name: org.sqlite.JDBC
+    username: ""
+    password: ""
+  jpa:
+    database-platform: com.server.config.SQLiteDialect
+    hibernate:
+      ddl-auto: validate
+  h2:
+    console:
+      enabled: true 
+      path: /h2-console 
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  logging:
+    level:
+      root: INFO
+      org.springframework.web: DEBUG
+      com.server: DEBUG
+    pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} - %level - [%thread] %logger : %msg%n"
