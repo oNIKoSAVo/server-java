@@ -1,5 +1,4 @@
-1. git clone https://github.com/oASKETo/TestFrelanse.git
-2. Открываем 1 терминал
+1. Открываем 1 терминал
 2. cd back
 3. npm install
 4. Открываем 2 терминал
